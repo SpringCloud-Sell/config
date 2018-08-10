@@ -1,0 +1,18 @@
+server:
+  port: 8771
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/SpringCloud-Sell/config-repo.git
+          username: Rushing0711
+          password: Rushing@0711
