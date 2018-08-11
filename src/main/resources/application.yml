@@ -9,6 +9,8 @@ eureka:
 spring:
   application:
     name: config
+  profiles:
+    active: dev
   cloud:
     config:
       server:
