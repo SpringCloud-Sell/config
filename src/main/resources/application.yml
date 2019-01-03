@@ -14,9 +14,6 @@ spring:
     name: config
   profiles:
     active: dev
-  rabbitmq:
-    host: ${prod.host}
-    port: 15672
   cloud:
     config:
       server:
