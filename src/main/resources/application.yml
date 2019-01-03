@@ -1,3 +1,6 @@
+# 切换生产环境地址使用
+prod:
+  host: 192.168.8.116
 server:
   port: 8771
 
@@ -9,6 +12,10 @@ eureka:
 spring:
   application:
     name: config
+  profiles:
+    active: dev
+  rabbitmq:
+    host: ${prod.host}
   cloud:
     config:
       server:
@@ -17,3 +24,8 @@ spring:
           username: Rushing0711
           password: Rushing@0711
           basedir: /home/emon/saas/SpringCloud-Sell/config/basedir
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
